@@ -1,0 +1,128 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0f2a, #0b1a3a);
+    color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #ffaa44;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    color: #ffcc88;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffaa44;
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.planet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    background: #1e2a3a;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
